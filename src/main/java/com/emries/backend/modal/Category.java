@@ -2,6 +2,7 @@ package com.emries.backend.modal;
 
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -24,7 +25,7 @@ public class Category {
 	
 	private Long timeCreated;
 	
-	@OneToMany
+	@OneToMany(cascade = {CascadeType.ALL})
 	@JoinColumn(name = "category_id")
 	private Set<Product> products;
 	

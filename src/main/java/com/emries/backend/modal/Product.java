@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name = "product")
@@ -25,6 +26,9 @@ public class Product {
 	private Boolean isBlocked;
 	
 	private Long timeCreated;
+	
+	@Transient
+	private Long categoryId;
 
 	public Long getProductId() {
 		return productId;
@@ -80,6 +84,14 @@ public class Product {
 
 	public void setTimeCreated(Long timeCreated) {
 		this.timeCreated = timeCreated;
+	}
+
+	public Long getCategoryId() {
+		return categoryId;
+	}
+
+	public void setCategoryId(Long categoryId) {
+		this.categoryId = categoryId;
 	}
 	
 	

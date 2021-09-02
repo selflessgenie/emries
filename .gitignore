@@ -6,6 +6,7 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+sh.exe.stackdump
 
 ### STS ###
 .apt_generated
